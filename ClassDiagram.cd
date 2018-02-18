@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
+  <Class Name="Cannon">
+    <Position X="0.5" Y="0.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>CAABCAgACAAAAAgAAAAAIBAAQAAAAACgAAAAAAAAAEA=</HashCode>
+      <FileName>Cannon.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Engine">
+    <Position X="0.5" Y="4.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>CAABAAAACAQAAAgAAAIAABAAIAAIAAAoBAAAAAAAAAA=</HashCode>
+      <FileName>Engine.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Tower">
+    <Position X="0.5" Y="8" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>CAABAAAAGAAAAAgAAAAAABAAAAAAAAAgAAIAACAAAQA=</HashCode>
+      <FileName>Tower.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Panzer">
+    <Position X="5" Y="4.5" Width="2.25" />
+    <AssociationLine Name="engine" Type="Engine" FixedFromPoint="true">
+      <Path>
+        <Point X="5" Y="5.5" />
+        <Point X="2.75" Y="5.5" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="tower" Type="Tower" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="5" Y="5.688" />
+        <Point X="4.625" Y="5.688" />
+        <Point X="4.625" Y="9.547" />
+        <Point X="2.75" Y="9.547" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="cannon" Type="Cannon" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="5" Y="5.312" />
+        <Point X="4.625" Y="5.312" />
+        <Point X="4.625" Y="2.239" />
+        <Point X="2.75" Y="2.239" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>ABAQAABAAAAAAAAAAggIAAAAAAAAgAAAAAAAgBQAAQA=</HashCode>
+      <FileName>Panzer.h</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="engine" />
+      <Field Name="tower" />
+      <Field Name="cannon" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Tank">
+    <Position X="13.5" Y="1" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAIAAAiAAAAAAAAEAAIAAEAAIAAAAAA=</HashCode>
+      <FileName>Tank.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="InfantryFightingVehicle">
+    <Position X="8.75" Y="4.75" Width="2.75" />
+    <InheritanceLine Type="Panzer" FixedFromPoint="true">
+      <Path>
+        <Point X="7.25" Y="5.875" />
+        <Point X="8.75" Y="5.875" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAiCACAAAAAAAEAAAAgAAAAAEAAEAAAAABAAAAAAAAA=</HashCode>
+      <FileName>InfantryFightingVehicle.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Tracklying">
+    <Position X="8.75" Y="2.25" Width="2.75" />
+    <InheritanceLine Type="Panzer" FixedFromPoint="true">
+      <Path>
+        <Point X="7.25" Y="5.5" />
+        <Point X="7.625" Y="5.5" />
+        <Point X="7.625" Y="3.188" />
+        <Point X="8.75" Y="3.188" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQ=</HashCode>
+      <FileName>Tracklying.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TankDestroyer">
+    <Position X="13.5" Y="4" Width="2.25" />
+    <InheritanceLine Type="Tracklying" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="11.5" Y="3.562" />
+        <Point X="12.5" Y="3.562" />
+        <Point X="12.5" Y="4.438" />
+        <Point X="13.5" Y="4.438" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAEAAAAAAAAwAAAAAAAAEAAQAAAggAAAAAAA=</HashCode>
+      <FileName>TankDestroyer.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
